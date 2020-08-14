@@ -49,6 +49,13 @@ end
   DB[:conn].execute(sql, self.name, self.grade, self.id)
  end
 
+
+ #This class method takes an argument of an array.
+# When we call this method we will pass it the array 
+#that is the row returned from the database by the 
+#execution of a SQL query. We can anticipate that this array
+# will contain three elements in this order: the id, name and grade 
+#of a student.
  def self.new_from_db(row)
  id=row[0]
  name=row[1]
@@ -74,3 +81,4 @@ end
   end
 end
 
+3
